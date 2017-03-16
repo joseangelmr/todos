@@ -1,11 +1,11 @@
 import { getTodos } from './getTodos'
-// import { addTodo } from './addTodo'
-// import { changeTodo } from './changeTodo'
-// import { removeTodo } from './removeTodo'
+import { addTodo } from './addTodo'
+import { changeTodo } from './changeTodo'
+import { removeTodo } from './removeTodo'
 
 export {
     getTodos,
-    // addTodo,
-    // changeTodo,
-    // removeTodo
+    addTodo,
+    changeTodo,
+    removeTodo
 };

@@ -1,6 +1,7 @@
 import { ALL_TODOS, } from './constants';
 import update from 'react-addons-update';
 import _ from 'lodash'
+import { get_todos } from './../../client/js/api'
 
 export function updateTodos(data) {
     return {
@@ -12,8 +13,11 @@ export function updateTodos(data) {
 }
 
 export function getTodos() {
-
-    return dispatch => {}
+    return dispatch => {
+        get_todos().then(response => {
+            dispatch(updateTodos(response))
+        }).catch(error => { });
+    }
 }
 
 export function reducer(state, action) {

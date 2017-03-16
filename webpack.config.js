@@ -20,6 +20,14 @@ module.exports = {
             test: /\.jsx?$/,
             exclude: /node_modules|build/,
             loader: 'babel-loader?cacheDirectory=true'
+        },
+        {
+            test: /\.json$/,
+            loader: 'json-loader'
+        },
+        {
+            test: /\.css$/,
+            loader: "style-loader!css-loader"
         }]
     }
 };

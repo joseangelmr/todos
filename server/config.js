@@ -79,7 +79,6 @@ module.exports = exports = function (app) {
   });
 
 
-
   app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath
@@ -89,6 +88,8 @@ module.exports = exports = function (app) {
 
   app.use(bodyparser.json());
   app.use(bodyparser.urlencoded({ extended: true }));
+
+
 
 
 };
