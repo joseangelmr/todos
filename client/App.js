@@ -1,9 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { Router } from 'react-router';
+import routeConfig from './../commons/routeConfig';
 
-export default class App extends Component {
+export default class App extends React.Component {
+
     render() {
+        const { history, store } = this.props;
+        if (!this.routeConfig) this.routeConfig = routeConfig;
+
         return (
-            <h1>Todos.</h1>
+            <Provider store={store}>
+                <Router history={ history } routes={ routeConfig }></Router>
+            </Provider>
         );
     }
 }
